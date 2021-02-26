@@ -1,0 +1,90 @@
+*{
+  /* removing default browser padding or margin and setting the box-sizing to
+  border-box because we want our elements to have fixed with  even though we padding
+  padding, margin, or border. unlike content-box that changes size when we add padding
+  margin or border*/
+  margin : 0;
+  padding : 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Libre Franklin', sans-serif;
+  text-align: center;
+  padding:40px 20px 20px 20px;
+}
+.intro{
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+.text{
+  display: inline;
+  font-size: 40px;
+  opacity: 0.5;
+
+}
+strong{
+  font-size: 40px;
+}
+p{
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+input{
+  height: 30px;
+  width: 400px;
+  border-radius: 25px;
+}
+button{
+  height: 30px;
+  width:150px;
+  background-color: hsl(223, 87%, 63%);
+  color:white;
+  border-radius: 25px;
+}
+.dashboard{
+   /* we can only center block elements and not inline elements.
+   block elements take the whole of it's parent */
+  display: block;
+  margin: 0 auto;
+}
+form{
+  margin-top:50px;
+  margin-bottom: 50px;
+}
+.fontAwesome{
+  margin-top:50px;
+  margin-bottom: 30px;
+}
+.icon{
+  /* display: block; */
+  margin-right:30px;
+}
+.copyright{
+  margin-bottom: 10px;
+}
+/* at 1240px and below, perform this styling */
+@media (max-width: 1240px) {
+  .dashboard{
+    width: 100%;
+  }
+  body{
+    /* the width of the parent at this point should be the size of the viewport */
+    width: 100vw;
+  }
+}
+/* at 650px and below, we want to perform this styling */
+@media (max-width: 650px){
+  button{
+    margin-top:10px;
+  }
+  form, button, input{
+    /* we want the width of button and input to be 100% width of its parent
+    which is form */
+
+    /* at 650px and below, we want the width of the form to be that of the parent,
+    which is body */
+    width: 100%;
+  }
+}
